@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         
-        LineRenderer 
+        
 
     }
 
@@ -62,9 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, lineRenderer.transform.position , moveSpeed * Time.deltaTime);
 
-        }
-
-        pointsArry = lineRenderer.transform.position;
-        
+        }  
     }
 }
