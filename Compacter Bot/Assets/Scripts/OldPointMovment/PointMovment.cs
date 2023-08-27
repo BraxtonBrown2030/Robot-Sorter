@@ -9,6 +9,7 @@ public class PointMovment : MonoBehaviour
     public GameObject[] points;
     private int curPointsPlaced;
     public int curPlayerMove;
+    public Vector3 pointsResetPostion;
 
     [SerializeField] private Camera mainCamera;
 
@@ -38,13 +39,14 @@ public class PointMovment : MonoBehaviour
 
     }
 
-    private void ResetPoints()
+    public void ResetPoints()
     {
 
         if(Input.GetKeyDown(KeyCode.R))
         {
 
             curPointsPlaced = 0;
+            points[curPointsPlaced].transform.position =  pointsResetPostion;
 
         }
 
