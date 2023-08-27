@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Lists")]
     public List<Transform> lineTransforms;
     private List<Vector3> points = new List<Vector3>();
+    private Vector3[] pointsArry;
 
     [Header("Game Managers")]
     public LineRenderer lineRenderer;
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         
+        LineRenderer 
+
     }
 
     void Update()
@@ -61,5 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        pointsArry = lineRenderer.transform.position;
+        
     }
 }
