@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
         if(lineRendererON == true)
         {
 
-            transform.position = Vector3.MoveTowards(transform.position, lineRenderer.transform.position , moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, transform.position, moveSpeed * Time.deltaTime);
 
         }  
     }
