@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq.Expressions;
 using UnityEngine;
 
@@ -22,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Game Managers")]
     public LineRenderer lineRenderer;
     public Camera sceneCamera;
+    public LIneRenderPoitns lRP;
+    public LinePointsSO sOlinePoints;
+
 
     void Start()
     {
@@ -36,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             points.Clear();
+            sOlinePoints.ClearVector3List();
         }
 
 
@@ -44,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
             Ray myRay = sceneCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit mayRayCastHit;
+            lRP.GetLineRedenrderPOints(); // Ttestin raycats
 
             if(Physics.Raycast(myRay, out mayRayCastHit))
             {
@@ -60,8 +66,15 @@ public class PlayerMovement : MonoBehaviour
         if(lineRendererON == true)
         {
 
-            transform.position = Vector3.MoveTowards(transform.position, transform.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
 
         }  
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+
+            lineRendererON = true;
+
+        }
     }
 }
