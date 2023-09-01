@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq.Expressions;
 using UnityEngine;
 
@@ -37,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
+        StartMovement();
+
         if(Input.GetButtonDown("Fire1"))
         {
             points.Clear();
@@ -70,11 +71,16 @@ public class PlayerMovement : MonoBehaviour
 
         }  
 
-        if(Input.GetKeyDown(KeyCode.Space))
+    }
+
+    public void StartMovement()
+    {
+
+        if(Input.GetKey(KeyCode.R))
         {
 
             lineRendererON = true;
-
+            Debug.Log("R pressed");
         }
     }
 }

@@ -6,22 +6,12 @@ public class LIneRenderPoitns : MonoBehaviour
 {
     
     public LineRenderer lineRenderer;
-
-    //public List<Vector3> linepoints = new List<Vector3>();
-
     public LinePointsSO linePoints;
 
     void Start()
     {
 
         
-    }
-
-    void Update()
-    {
-        
-       // GetLineRedenrderPOints();
-
     }
 
     public void GetLineRedenrderPOints()
