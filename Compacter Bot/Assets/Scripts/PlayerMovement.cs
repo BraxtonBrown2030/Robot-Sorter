@@ -67,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         if(lineRendererON == true)
         {
 
+            Debug.Log("movomet start");
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
 
         }  
@@ -76,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     public void StartMovement()
     {
 
-        if(Input.GetKey(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.R))
         {
 
             lineRendererON = true;
