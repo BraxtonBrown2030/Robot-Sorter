@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         
-        StartMovement();
+        //StartMovement();
 
         if(Input.GetButtonDown("Fire1"))
         {
@@ -64,16 +64,16 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if(lineRendererON == true)
-        {
+        //    if(lineRendererON == true)
+    
 
-            Debug.Log("movomet start");
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
 
-        }  
+         
 
     }
 
+/*
     public void StartMovement()
     {
 
@@ -84,4 +84,5 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("R pressed");
         }
     }
+*/
 }

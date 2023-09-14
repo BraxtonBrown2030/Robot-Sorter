@@ -19,7 +19,7 @@ public class LIneRenderPoitns : MonoBehaviour
 
 
         int positionCount = lineRenderer.positionCount;
-        for (int i = 0; i < positionCount; i++)
+        for (int i = 0; i < positionCount; i++) // ask about how this works
         {
            linePoints.vector3Points.Add(lineRenderer.GetPosition(i));
         }
