@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public LIneRenderPoitns lRP;
     public LinePointsSO sOlinePoints;
 
+    
+
+
 
     void Start()
     {
@@ -38,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         
         //StartMovement();
 
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Fire1")) // on mouse down or input system(traking inputs)  touch inputs on phone
         {
             points.Clear();
             sOlinePoints.ClearVector3List();
@@ -85,4 +88,23 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 */
+
+/*
+void TestCode()
+{
+
+
+    if (Step2Points(start, next, ref distance, ref remainingDistance, out Vector3 point))
+    {
+        MarkPoint(point);
+        start = point;
+    }
+
+    lineRenderer.GetPosition(i);
+    i++;
+
+}
+*/
+
+
 }
