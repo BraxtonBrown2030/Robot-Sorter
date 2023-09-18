@@ -301,7 +301,7 @@ LineRenderer:
   m_GameObject: {fileID: 387943541}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 0
@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 414144413}
   - component: {fileID: 414144412}
   - component: {fileID: 414144411}
+  - component: {fileID: 414144415}
   m_Layer: 5
   m_Name: PlayerUI
   m_TagString: Untagged
@@ -536,6 +537,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &414144415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414144410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28229d4b3e6fa7d43a791631851f557e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathleft: {fileID: 11400000, guid: 886fc434ff476f74d9972f27599faf60, type: 2}
+  slider: {fileID: 1477287291}
 --- !u!1 &517281400
 GameObject:
   m_ObjectHideFlags: 0

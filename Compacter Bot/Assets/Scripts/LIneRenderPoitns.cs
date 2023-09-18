@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LIneRenderPoitns : MonoBehaviour
@@ -11,7 +12,9 @@ public class LIneRenderPoitns : MonoBehaviour
     void Start()
     {
 
-        
+        linePoints.vector3Points.Clear();
+
+
     }
 
     public void GetLineRedenrderPOints()
@@ -24,6 +27,13 @@ public class LIneRenderPoitns : MonoBehaviour
            linePoints.vector3Points.Add(lineRenderer.GetPosition(i));
         }
 
+
+    }
+
+    void Quit()
+    {
+
+        linePoints.vector3Points.Clear();
 
     }
     

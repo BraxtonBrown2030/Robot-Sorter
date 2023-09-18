@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.iOS;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -26,9 +28,6 @@ public class PlayerMovement : MonoBehaviour
     public LIneRenderPoitns lRP;
     public LinePointsSO sOlinePoints;
 
-    
-
-
 
     void Start()
     {
@@ -39,7 +38,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         
+
         //StartMovement();
 
         if(Input.GetButtonDown("Fire1")) // on mouse down or input system(traking inputs)  touch inputs on phone
@@ -68,12 +69,20 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        //    if(lineRendererON == true)
-    
+            else if(lineRendererON == true && Input.touchCount > 0f)
+            {
 
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
 
-         
+            }
+        
+
+            if(Input.touchCount > (0))
+            {
+ 
+                Debug.Log("touch works");
+                
+            }
 
     }
 
