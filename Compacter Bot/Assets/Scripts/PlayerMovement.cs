@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             RaycastHit mayRayCastHit;
             lRP.GetLineRedenrderPOints(); // Ttestin raycats
 
-            if(Physics.Raycast(myRay, out mayRayCastHit))
+             if(Physics.Raycast(myRay, out mayRayCastHit))
             {
 
                 points.Add(mayRayCastHit.point);
