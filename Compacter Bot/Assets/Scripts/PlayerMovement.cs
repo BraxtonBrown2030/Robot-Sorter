@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.iOS;
 using System;
+using System.Linq;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,11 +29,12 @@ public class PlayerMovement : MonoBehaviour
     public LIneRenderPoitns lRP;
     public LinePointsSO sOlinePoints;
 
+    public Vector3 distaince;
 
     void Start()
     {
         
-        
+    
 
     }
 
@@ -50,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if(Input.GetButton("Fire1"))
+        if(Input.GetButton("Fire1") && Vector3.Distance(sOlinePoints.vector3Points.Max, distaince) > new Vector3(0,0,0))
         {
 
             Ray myRay = sceneCamera.ScreenPointToRay(Input.mousePosition);
@@ -99,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
     }
 */
 
-/*
 void TestCode()
 {
 
@@ -114,7 +115,7 @@ void TestCode()
     i++;
 
 }
-*/
+
 
 
 }
