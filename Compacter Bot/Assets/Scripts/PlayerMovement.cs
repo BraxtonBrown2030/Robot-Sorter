@@ -50,12 +50,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if(Input.GetButton("Fire1") && Vector3.Distance(sOlinePoints.vector3Points.Max, distaince) > new Vector3(0,0,0))
+        if(Input.GetButton("Fire1"))// && Vector3.Distance(sOlinePoints.vector3Points.Max, distaince) > new Vector3(0,0,0))
         {
 
             Ray myRay = sceneCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit mayRayCastHit;
-            lRP.GetLineRedenrderPOints(); // Ttestin raycats
+            lRP.GetLineRedenrderPOints();
 
              if(Physics.Raycast(myRay, out mayRayCastHit))
             {
@@ -69,51 +69,22 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-            else if(lineRendererON == true && Input.touchCount > 0f)
-            {
-
-                transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
-
-            }
-        
-
-            if(Input.touchCount > (0))
-            {
- 
-                Debug.Log("touch works");
-                
-            }
-
-    }
-
-/*
-    public void StartMovement()
-    {
-
-        if(Input.GetKeyDown(KeyCode.R))
+        else if(lineRendererON == true && Input.touchCount > 0f)
         {
 
-            lineRendererON = true;
-            Debug.Log("R pressed");
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
+
         }
+        
+
+        if(Input.touchCount > (0))
+        {
+ 
+            Debug.Log("touch works");
+                
+        }
+
     }
-*/
-
-void TestCode()
-{
-
-
-    if (Step2Points(start, next, ref distance, ref remainingDistance, out Vector3 point))
-    {
-        MarkPoint(point);
-        start = point;
-    }
-
-    lineRenderer.GetPosition(i);
-    i++;
-
-}
-
-
+    
 
 }
