@@ -1456,6 +1456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb67ac955dcc24f4db5aba133995b562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfPoints: {fileID: 11400000, guid: b5e5354ec2da75b498586269a00665a9, type: 2}
+  slider: {fileID: 1477287291}
 --- !u!114 &1477287291
 MonoBehaviour:
   m_ObjectHideFlags: 0

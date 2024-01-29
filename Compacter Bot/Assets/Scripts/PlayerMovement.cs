@@ -76,15 +76,16 @@ public class PlayerMovement : MonoBehaviour
 
         }
         
-
+    /*  // Log for testing that touch controls still work with raycast
         if(Input.touchCount > (0))
         {
  
             Debug.Log("touch works");
                 
         }
-
+    */
     }
+    
     
 
 }
