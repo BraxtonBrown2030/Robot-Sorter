@@ -1503,7 +1503,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 517281401}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1770,7 +1770,7 @@ MonoBehaviour:
   sceneCamera: {fileID: 963194227}
   lRP: {fileID: 1984684389}
   sOlinePoints: {fileID: 11400000, guid: b5e5354ec2da75b498586269a00665a9, type: 2}
-  distaince: {x: 0, y: 0, z: 0}
+  distaince: {x: 5, y: 0, z: 5}
 --- !u!1 &1544015939
 GameObject:
   m_ObjectHideFlags: 0

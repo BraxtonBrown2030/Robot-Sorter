@@ -1,9 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.iOS;
-using System;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,19 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 distaince;
 
-    void Start()
-    {
-        
-    
-
-    }
-
     void Update()
     {
-
-        
-
-        //StartMovement();
 
         if(Input.GetButtonDown("Fire1")) // on mouse down or input system(traking inputs)  touch inputs on phone
         {
@@ -50,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if(Input.GetButton("Fire1"))// && Vector3.Distance(sOlinePoints.vector3Points.Max, distaince) > new Vector3(0,0,0))
+        if(Input.GetButton("Fire1")) // && Vector3.Distance(sOlinePoints.vector3Points, distaince) > new Vector3(0,0,0))
         {
 
             Ray myRay = sceneCamera.ScreenPointToRay(Input.mousePosition);
@@ -63,29 +49,37 @@ public class PlayerMovement : MonoBehaviour
                 points.Add(mayRayCastHit.point);
 
                 lineRenderer.positionCount = points.Count;
-                lineRenderer.SetPositions(points.ToArray());  
+                lineRenderer.SetPositions(points.ToArray());
 
             }
 
         }
 
-        else if(lineRendererON == true && Input.touchCount > 0f)
+        else if(lineRendererON == true) //&& Input.touchCount > 0f)
         {
 
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y), moveSpeed * Time.deltaTime);
+            // transform.position = Vector3.MoveTowards(transform.position, sOlinePoints.vector3Points.First(), moveSpeed * Time.deltaTime);
+            
+            // old target vector 3 : new Vector3(lRP.transform.position.x,0.5f,lRP.transform.position.y
 
+            foreach (Vector3 points in sOlinePoints.vector3Points)
+            {
+
+                transform.position = Vector3.MoveTowards(transform.position,points, .5f * Time.deltaTime);
+
+                // StartCoroutine(ExampleCoroutine());
+
+            }
+            
         }
+
+    }
+    IEnumerator ExampleCoroutine()
+    {
         
-    /*  // Log for testing that touch controls still work with raycast
-        if(Input.touchCount > (0))
-        {
- 
-            Debug.Log("touch works");
-                
-        }
-    */
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
     }
     
-    
-
 }
