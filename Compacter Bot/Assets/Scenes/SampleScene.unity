@@ -1761,16 +1761,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69fe4c195167b274fac45637e55c0015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickup: {fileID: 0}
-  pointTesting: {fileID: 0}
   lineRendererON: 1
   moveSpeed: 5
-  lineTransforms: []
   lineRenderer: {fileID: 387943542}
   sceneCamera: {fileID: 963194227}
   lRP: {fileID: 1984684389}
   sOlinePoints: {fileID: 11400000, guid: b5e5354ec2da75b498586269a00665a9, type: 2}
   distaince: {x: 5, y: 0, z: 5}
+  pointNumber: 0
 --- !u!1 &1544015939
 GameObject:
   m_ObjectHideFlags: 0
