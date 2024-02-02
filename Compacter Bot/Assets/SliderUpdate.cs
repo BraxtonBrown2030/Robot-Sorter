@@ -11,8 +11,10 @@ public class SliderUpdate : MonoBehaviour
     void Update()
     {
 
+        
+        
         slider.value = numberOfPoints.vector3Points.Count;
-
+        
 
     }
 }

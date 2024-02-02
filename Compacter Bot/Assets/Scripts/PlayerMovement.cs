@@ -51,6 +51,28 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         
+        else if (lineRendererON == true && pointNumber < sOlinePoints.vector3Points.Count)
+        {
+            Vector3 targetPosition = sOlinePoints.vector3Points[pointNumber];
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+            // Check if the player has reached the current target point
+            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+            {
+                // Move to the next point in the list
+                pointNumber++;
+            }
+            if (pointNumber >= sOlinePoints.vector3Points.Count)
+            {
+                // Optional: You can add additional logic when the player reaches the last point
+                Debug.Log("Player reached the last point!");
+ 
+            }
+        }
+        
+        
+        /*
+        
         // handles movement to the listed object
         else if(lineRendererON == true)
         {
@@ -61,5 +83,6 @@ public class PlayerMovement : MonoBehaviour
 
             }
         }
+        */
     }
 }
