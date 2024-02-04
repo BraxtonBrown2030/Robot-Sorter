@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             //Debug.Log(pointNumber);
             // Check if the player has reached the current target point
-            if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+            if (Vector3.Distance(transform.position, targetPosition) < 0.5f)
             {
                 // Move to the next point in the list
                 pointNumber++;
@@ -68,7 +68,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 // Optional: You can add additional logic when the player reaches the last point
                 Debug.Log("Player reached the last point!");
- 
             }
         }
         
