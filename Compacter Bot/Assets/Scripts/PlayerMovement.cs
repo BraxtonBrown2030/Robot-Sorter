@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(pointNumber);
         // clears scriptible object list for new line to be drawn
         if(Input.GetButtonDown("Fire1")) // on mouse down or input system(traking inputs)  touch inputs on phone
         {
@@ -55,12 +56,13 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 targetPosition = sOlinePoints.vector3Points[pointNumber];
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
+            //Debug.Log(pointNumber);
             // Check if the player has reached the current target point
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
                 // Move to the next point in the list
                 pointNumber++;
+                //targetPosition = sOlinePoints.vector3Points[pointNumber];
             }
             if (pointNumber >= sOlinePoints.vector3Points.Count)
             {
